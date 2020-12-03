@@ -6,13 +6,61 @@
   height: 40vmin;
   pointer-events: none;
 }
+@font-face {
+  font-family: bold;
+  src: url(./fonts/BebasNeue\ Bold.ttf);
+}
 
+h1{
+  font-family: bold;
+}
+@font-face {
+  font-family: reg;
+  src: url(./fonts/BebasNeue\ Light.ttf);
+}
+@font-face {
+  font-family: light;
+  src: url(./fonts/BebasNeue\ Regular.ttf);
+}
+h2{
+  font-family: reg;
+  color: white;
+}
+h5{
+  font-family: medium;
+}
+a{
+  color: white;
+  font-family: medium;
+}
+@font-face {
+  font-family: medium;
+  src: url(./fonts/AvenirMedium.otf);
+}
+
+span {
+  font-family: medium;
+}
+label {
+  font-size: 20px;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
+imgFrame {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+}
+.imgA1 {
+  z-index: 1;
+}
 
+.imgB1 {
+  z-index: 3;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
