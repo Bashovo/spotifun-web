@@ -3,30 +3,29 @@ import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 
 function Footer(){
-    return (<Box height={400} width="100%" style={{backgroundColor:"#1b191a"}} >
-    <Box pt={10}>
+    return (<Box width="100%" style={{backgroundColor:"#1b191a"}} >
+    <Box pt={10} pb={5}>
     <Grid
 container
-alignItems="flex-start"
-direction="row"
-spacing={1}>
+
+>
  
      <Grid item md={1} s={1} xs={1}></Grid>
+     <Box pb={1}>
      <img src={'logo-white.png'} style={{ width:"150px", }} alt={"logo white"}/> 
+
+     </Box>
 
       </Grid>
     <Grid
 container
-alignItems="flex-start"
-direction="row"
-spacing={40}>
+>
  
      <Grid item md={4} s={1} xs={1}></Grid>
 
-     <Grid item md={1} s={4} xs={4}>
+     <Grid item md={1} s={1} xs={2}>
      <Grid
 container
-
 spacing={2}>
   <Grid item>
   <a href="" style={{textDecoration:"none"}}>PROFILE</a>
@@ -42,8 +41,8 @@ spacing={2}>
       </Grid>
 <Box  pt={14}>
  <Grid container justify="space-evenly">
- <Grid item md={1} s={0} xs={0}></Grid>
- <Grid item md={9} >
+ <Grid item md={1} s={1} xs={1}></Grid>
+ <Grid item md={9} s={9} xs={9}>
     <Grid container>
    <Grid item md={1} s={6} xs={6}>
 <a href="" style={{textDecoration:"none"}}>LEGAL</a>
@@ -64,7 +63,7 @@ spacing={2}>
    </Grid>
    </Grid>
    </Grid>
-  <Grid item md={2} s={10} xs={10}>
+  <Grid item md={2} s={10} xs={2}>
 <a href="" style={{textDecoration:"none"}}>©2019 MUSICDB</a>
 
    </Grid>

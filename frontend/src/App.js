@@ -37,7 +37,6 @@ function FrameGrid(props) {
 
   var emptySquares = 0;
   emptySquares = 6 - data.albums.length;
-  
   var emptyFrames = [];
 for (var i = 0; i < emptySquares; i++) {
   emptyFrames.push(
@@ -55,7 +54,7 @@ for (var i = 0; i < emptySquares; i++) {
     data.albums.map((
       album,id
     )=>(
-        <Grid item xs={3} sm={3} md={4} style={{maxWidth:"100%"}}>
+        <Grid item xs={3} sm={3} md={4} style={{maxWidth:"100%"}} >
         <img key={album.id} src={album.imageUrl} width="170" ></img>
     </Grid>
     
@@ -78,25 +77,26 @@ function App(props) {
     <div >
    
 <Header></Header>
-    <Background height={500} width="100%" pt={14} style={{overflowY:"hidden"}}>
+    <Background width="100%" py={14}>
       <Grid container>
     <Grid item md={1} s={1} xs={1} lg={1}></Grid>
-  <Grid item md={4} s={4} xs={4} lg={4}>
+  <Grid item md={4} s={11} xs={11} lg={4}>
     <Grid container
-  direction="column"
-  justify="center"
-  alignItems="flex-start">
-      <Grid item md={6} s={6} xs={6}>
+  >
+      <Grid item md={6} s={12} xs={12}>
         <h1 style={{fontSize:"66px",color:"white"}}>AMP UP <br></br> THOSE DBS  </h1>
       
         <h2>MAKE MUSIC ON THE GO.</h2>
       </Grid>
-      <Grid container justify="flex-start">
-      <img src={'hit-it.png'} style={{ width:"180px"}} alt={"hit it"}/> 
+      <Grid container>
+        <Box pb={2}>
+        <img src={'hit-it.png'} style={{ width:"180px"}} alt={"hit it"}/> 
+
+        </Box>
       </Grid>
     </Grid>
         </Grid>
-
+        <Grid item xs={1} sm={1} ></Grid>
         <Grid item xs={6} sm={6} md={6} style={{maxWidth:"100%"}}>
         <Grid container>
           <FrameGrid classes={classes} /> 
@@ -110,10 +110,18 @@ function App(props) {
   spacing={1}>
       <Grid item md={1} s={1} xs={1}></Grid>
       <Grid item md={11} s={11} xs={11}>
+      <Grid item md={11} s={11} xs={10}>
         <h1 style={{fontSize:"50px"}}>GET PRODUCIN WITH MUSICDB</h1>
+      </Grid>
+      <Grid item md={11} s={11} xs={11}>
+
         <h1 style={{marginBottom:"unset"}}>PICK YOUR PREFERED INSRUMENT</h1>
+      </Grid>
+      <Grid item md={11} s={11} xs={11}>
+
         <h5 style={{marginTop:"unset"}}>PICK THE INSTRUMENT YOU NEED TO COMPOSE YOUR PIECE</h5>
         <h5 style={{color:"red"}}>START COMPOSING</h5>
+      </Grid>
       </Grid>
       </Grid>
     </Box>
